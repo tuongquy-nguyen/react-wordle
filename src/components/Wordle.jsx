@@ -28,14 +28,22 @@ export default function Wordle({ solution }) {
 
   useEffect(() => {}, [guesses, turn, isCorrect]);
 
+  const onClickReset = () => {
+    window.location.reload();
+  };
+
   return (
     <div>
-      <div>Solution: {solution}</div>
-      <div>Current Guess: {currentGuess}</div>
+      <h1>WORDLE</h1>
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
       <KeyPad usedKeys={usedKeys} />
       {showModal && (
-        <Modal isCorrect={isCorrect} turn={turn} solution={solution} />
+        <Modal
+          isCorrect={isCorrect}
+          turn={turn}
+          solution={solution}
+          onClickReset={onClickReset}
+        />
       )}
     </div>
   );

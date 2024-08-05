@@ -130,6 +130,15 @@ h1 {
   letter-spacing: 1px;
 }
 
+button.reset {
+  background-color: #5ac85a;
+  color: #fff;
+  margin: 12px;
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+}
+
 /* animation */
 @keyframes flip {
   0% {
