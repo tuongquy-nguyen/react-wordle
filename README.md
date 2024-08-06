@@ -19,4 +19,4 @@ Clone the repository and run the app locally to start playing Wordle Mini Game:
 git clone https://github.com/tuongquy-nguyen/react-wordle.git
 cd react-wordle
 npm run install
-npm run start
+npm run dev
