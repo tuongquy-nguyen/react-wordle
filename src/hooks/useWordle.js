@@ -104,7 +104,7 @@ const useWordle = (solution) => {
       addNewGuess(formatted);
     }
 
-    if (key === "Backspace") {
+    if (key === "Backspace" || key === "Delete") {
       setCurrentGuess((prev) => prev.slice(0, -1));
       return;
     }

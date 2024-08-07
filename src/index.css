@@ -71,39 +71,60 @@ h1 {
   animation: bounce 0.2s ease-in-out forwards;
 }
 
-.keypad {
+.firstKeypad {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* Create 7 equal columns */
+  gap: 5px; /* Spacing between grid items */
   max-width: 500px;
   margin: 20px auto;
 }
 
-.keypad > div {
-  margin: 5px;
-  min-width: 40px;
-  width: fit-content;
-  height: 50px;
+.secondKeypad {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  /* Create 7 equal columns */
+  gap: 5px;
+  /* Spacing between grid items */
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.thirdKeypad {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  /* Create 7 equal columns */
+  gap: 5px;
+  /* Spacing between grid items */
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.firstKeypad > div, .secondKeypad > div, .thirdKeypad > div {
+  min-height: 50px;
   background: #eee;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
-  line-height: 50px;
 }
 
-.keypad > div[data-id='Backspace'], .keypad>div[data-id='Enter']{
-  padding: 0 4px;
+.thirdKeypad > div[data-id='Delete'], .thirdKeypad > div[data-id='Enter'] {
+  grid-column: span 2; /* Make these keys span two columns */
 }
 
-.keypad > div.green {
+.firstKeypad > div.green, .secondKeypad > div.green, .thirdKeypad > div.green {
   background: #5ac85a;
   color: #fff;
   transition: all 0.3s ease-in;
 }
 
-.keypad > div.yellow {
+.firstKeypad > div.yellow, .secondKeypad > div.yellow, .thirdKeypad > div.yellow {
   background: #e2cc68;
   color: #fff;
   transition: all 0.3s ease-in;
 }
 
-.keypad > div.grey {
+.firstKeypad > div.grey, .secondKeypad > div.grey, .thirdKeypad > div.grey {
   background: #a1a1a1;
   color: #fff;
   transition: all 0.3s ease-in;
