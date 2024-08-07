@@ -78,12 +78,17 @@ h1 {
 
 .keypad > div {
   margin: 5px;
-  width: 40px;
+  min-width: 40px;
+  width: fit-content;
   height: 50px;
   background: #eee;
   display: inline-block;
   border-radius: 4px;
   line-height: 50px;
+}
+
+.keypad > div[data-id='Backspace'], .keypad>div[data-id='Enter']{
+  padding: 0 4px;
 }
 
 .keypad > div.green {

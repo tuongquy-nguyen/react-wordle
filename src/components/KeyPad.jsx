@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
+import useWordle from "../hooks/useWordle";
+import data from "../../data/db.json";
 
-export default function KeyPad({ usedKeys }) {
+export default function KeyPad({ usedKeys, solution }) {
   const [letters, setLetters] = useState(null);
+  const { handleKeyUp } = useWordle(solution);
 
   useEffect(() => {
-    fetch("http://localhost:3100/letters")
-      .then((res) => {
-        return res.json();
-      })
-      .then((json) => {
-        setLetters(json);
-      });
+    setLetters(data.letters);
   }, []);
 
   return (
@@ -18,9 +15,17 @@ export default function KeyPad({ usedKeys }) {
       {letters &&
         letters.map((letter) => {
           const color = usedKeys[letter.key];
-
           return (
-            <div key={letter.key} className={color}>
+            <div
+              key={letter.key}
+              data-id={letter.key}
+              className={color}
+              onClick={() => {
+                window.dispatchEvent(
+                  new KeyboardEvent("keyup", { key: letter.key })
+                );
+              }}
+            >
               {letter.key.toUpperCase()}
             </div>
           );

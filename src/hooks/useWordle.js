@@ -84,6 +84,7 @@ const useWordle = (solution) => {
   };
 
   const handleKeyup = ({ key }) => {
+    console.log(key)
     // only add guess if turn < 5
     if (key === "Enter") {
       if (turn > 5) {
