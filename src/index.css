@@ -73,7 +73,7 @@ h1 {
 
 .firstKeypad {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* Create 7 equal columns */
+  grid-template-columns: repeat(12, 1fr); /* Create 7 equal columns */
   gap: 5px; /* Spacing between grid items */
   max-width: 500px;
   margin: 20px auto;
@@ -91,7 +91,7 @@ h1 {
 
 .thirdKeypad {
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   /* Create 7 equal columns */
   gap: 5px;
   /* Spacing between grid items */
@@ -108,7 +108,7 @@ h1 {
   border-radius: 4px;
 }
 
-.thirdKeypad > div[data-id='Delete'], .thirdKeypad > div[data-id='Enter'] {
+.firstKeypad > div[data-id='Delete'], .thirdKeypad > div[data-id='Enter'] {
   grid-column: span 2; /* Make these keys span two columns */
 }
 

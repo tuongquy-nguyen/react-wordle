@@ -9,7 +9,8 @@
     {"key": "u"},
     {"key": "i"},
     {"key": "o"},
-    {"key": "p"}
+    {"key": "p"},
+    {"key": "Delete"}
   ],
   "secondLetters": [
     {"key": "a"},
@@ -23,7 +24,6 @@
     {"key": "l"}
   ],
   "thirdLetters": [
-    {"key": "Delete"},
     {"key": "z"},
     {"key": "x"},
     {"key": "c"},
